@@ -50,10 +50,22 @@ TEC_PARAMETERS = [
     {"id": 52200, "name": "External Object Temperature", "format": "FLOAT32"},
 ]
 
-
+COMMON_PARAMETERS = [
+    {"id": 100, "name": "Device Type", "format": "INT32"},
+    {"id": 101, "name": "Hardware Version", "format": "INT32"},
+    {"id": 102, "name": "Serial Number", "format": "INT32"},
+    {"id": 103, "name": "Firmware Version", "format": "INT32"},
+    {"id": 104, "name": "Device Status", "format": "INT32"},
+    {"id": 105, "name": "Error Number", "format": "INT32"},
+    {"id": 106, "name": "Error Instance", "format": "INT32"},
+    {"id": 107, "name": "Error Parameter", "format": "INT32"},
+    {"id": 108, "name": "Save Data to Flash", "format": "INT32"},
+    {"id": 109, "name": "Flash Status", "format": "INT32"},
+]
 #common LDD-112x family parameters
 #for a full list of parameters and their description, see the "LDD-Family MeCom Communication Protocol" document
 LDD_112x_PARAMETERS = [
+    {"id": 100, "name": "Device Status", "format": "INT32"},
     {"id": 104, "name": "Device Status", "format": "INT32"},
     {"id": 108, "name": "Save Data to Flash", "format": "INT32"},
     {"id": 109, "name": "Flash Status", "format": "INT32"},
@@ -78,6 +90,33 @@ LDD_112x_PARAMETERS = [
     {"id": 52102, "name": "Set Output States", "format": "INT32"},
     {"id": 52103, "name": "Read Input States", "format": "INT32"},
 ]
+
+#common LDD-112x family parameters
+#for a full list of parameters and their description, see the "LDD-Family MeCom Communication Protocol" document
+
+LDD_1137_PARAMETERS = [
+    {"id": 1016, "name": "Laser Diode Current", "format": "FLOAT32"},
+    {"id": 1017, "name": "Laser Diode Voltage", "format": "FLOAT32"},
+    {"id": 1015, "name": "Laser Diode Temperature", "format": "FLOAT32"},
+    {"id": 3020, "name": "Current Limit Max [A]", "format": "FLOAT32"},
+    {"id": 3040, "name": "Device Address", "format": "INT32"},
+    {"id": 2001, "name": "Current CW", "format": "FLOAT32"},
+    {"id": 2020, "name": "Input Source", "format": "INT32"},
+    {"id": 102, "name": "Device Serial Number", "format": "INT32"},
+    {"id": 3050 , "name": "Baud Rate", "format": "INT32"},
+    {"id": 3051 , "name": "Response Delay ", "format": "INT32"},
+    {"id": 3080, "name": "Hardware PIN", "format": "INT32"},
+    {"id": 6100, "name": "GPIO Function", "format": "INT32"},
+    {"id": 6101, "name": "GPIO Level Assignment", "format": "INT32"},
+    {"id": 6102, "name": "GPIO Hardware Configuration", "format": "INT32"},
+    {"id": 6103, "name": "GPIO Channel", "format": "INT32"},
+    {"id": 6310, "name": "Delay till Restart", "format": "INT32"},
+    {"id": 52100, "name": "Enable Function", "format": "INT32"},
+    {"id": 52101, "name": "Set Output to Push-Pull", "format": "INT32"},
+    {"id": 52102, "name": "Set Output States", "format": "INT32"},
+    {"id": 52103, "name": "Read Input States", "format": "INT32"},
+]
+
 
 #deprecated, use LDD_112x_PARAMETERS instead
 LDD_PARAMETERS = LDD_112x_PARAMETERS
