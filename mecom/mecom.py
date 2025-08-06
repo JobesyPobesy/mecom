@@ -14,7 +14,7 @@ from serial import Serial
 
 # from this package
 from .exceptions import ResponseException, WrongResponseSequence, WrongChecksum, ResponseTimeout, UnknownParameter, UnknownMeComType
-from .commands import TEC_PARAMETERS, LDD_PARAMETERS, LDD_112x_PARAMETERS, LDD_130x_PARAMETERS, LDD_1321_PARAMETERS, ERRORS
+from .commands import COMMON_PARAMETERS, LDD_1137_PARAMETERS, TEC_PARAMETERS, LDD_PARAMETERS, LDD_112x_PARAMETERS, LDD_130x_PARAMETERS, LDD_1321_PARAMETERS, ERRORS
 
 
 class Parameter(object):
@@ -70,6 +70,9 @@ class ParameterList(object):
         Reads the parameter dicts from commands.py.
         """
         self._PARAMETERS = []
+        for parameter in COMMON_PARAMETERS:
+            self._PARAMETERS.append(Parameter(parameter))
+
         if metype == 'TEC':
             for parameter in TEC_PARAMETERS:
                 self._PARAMETERS.append(Parameter(parameter))
@@ -81,6 +84,9 @@ class ParameterList(object):
                 self._PARAMETERS.append(Parameter(parameter))
         elif metype =='LDD-1321':
             for parameter in LDD_1321_PARAMETERS:
+                self._PARAMETERS.append(Parameter(parameter))
+        elif metype =='LDD-1137':
+            for parameter in LDD_1137_PARAMETERS:
                 self._PARAMETERS.append(Parameter(parameter))
         else:
             raise UnknownMeComType
