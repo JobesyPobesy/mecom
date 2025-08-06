@@ -95,26 +95,37 @@ LDD_112x_PARAMETERS = [
 #for a full list of parameters and their description, see the "LDD-Family MeCom Communication Protocol" document
 
 LDD_1137_PARAMETERS = [
-    {"id": 1016, "name": "Laser Diode Current", "format": "FLOAT32"},
-    {"id": 1017, "name": "Laser Diode Voltage", "format": "FLOAT32"},
-    {"id": 1015, "name": "Laser Diode Temperature", "format": "FLOAT32"},
-    {"id": 3020, "name": "Current Limit Max [A]", "format": "FLOAT32"},
-    {"id": 3040, "name": "Device Address", "format": "INT32"},
-    {"id": 2001, "name": "Current CW", "format": "FLOAT32"},
-    {"id": 2020, "name": "Input Source", "format": "INT32"},
-    {"id": 102, "name": "Device Serial Number", "format": "INT32"},
-    {"id": 3050 , "name": "Baud Rate", "format": "INT32"},
-    {"id": 3051 , "name": "Response Delay ", "format": "INT32"},
-    {"id": 3080, "name": "Hardware PIN", "format": "INT32"},
-    {"id": 6100, "name": "GPIO Function", "format": "INT32"},
-    {"id": 6101, "name": "GPIO Level Assignment", "format": "INT32"},
-    {"id": 6102, "name": "GPIO Hardware Configuration", "format": "INT32"},
-    {"id": 6103, "name": "GPIO Channel", "format": "INT32"},
-    {"id": 6310, "name": "Delay till Restart", "format": "INT32"},
-    {"id": 52100, "name": "Enable Function", "format": "INT32"},
-    {"id": 52101, "name": "Set Output to Push-Pull", "format": "INT32"},
-    {"id": 52102, "name": "Set Output States", "format": "INT32"},
-    {"id": 52103, "name": "Read Input States", "format": "INT32"},
+    ### Monitoring ###
+    #System status
+    {"id": 1104, "name": "System Status", "format": "INT32"},
+    {"id": 1105, "name": "System Error Nr", "format": "INT32"},
+    #LDD status
+    {"id": 21104, "name": "LDD Status", "format": "INT32"},
+    {"id": 21105, "name": "LDD Error Nr", "format": "INT32"},
+    #LDD
+    {"id": 1010, "name": "Driver Input Voltage", "format": "FLOAT32"},
+    {"id": 20000, "name": "Laser Diode Current CW", "format": "FLOAT32"},
+    {"id": 20001, "name": "Laser Diode Voltage Actual", "format": "FLOAT32"},
+    {"id": 21106, "name": "Hardware Interlock", "format": "FLOAT32"},
+    {"id": 15000, "name": "Temperature", "format": "FLOAT32"}, #degC
+    
+
+    ### Control ###
+    #Current
+    {"id": 25100, "name": "LDD Enable", "format": "INT32"},
+    {"id": 22000, "name": "Current Source Selector", "format": "INT32"},
+    {"id": 22150, "name": "Current CW", "format": "FLOAT32"},
+    {"id": 23102, "name": "Current High", "format": "FLOAT32"},
+    {"id": 23110, "name": "Current Low", "format": "FLOAT32"},
+    #PID
+    {"id": 27000, "name": "Kp", "format": "FLOAT32"}, #%/A
+    {"id": 27001, "name": "Ti", "format": "FLOAT32"}, #%s
+    {"id": 27002, "name": "Td", "format": "FLOAT32"}, #s
+    {"id": 27010, "name": "Slew Rate", "format": "FLOAT32"}, #A/us
+    #Ext temperature error limits
+    {"id": 15010, "name": "Enable Temperature Limits", "format": "INT32"}, #0..1
+    {"id": 15011, "name": "Temperature Limit High", "format": "FLOAT32"}, #degC
+    {"id": 15012, "name": "Temperature Limit Low", "format": "FLOAT32"}, #degC
 ]
 
 
