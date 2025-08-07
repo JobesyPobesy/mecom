@@ -117,6 +117,7 @@ LDD_1137_PARAMETERS = [
     {"id": 22150, "name": "Current CW", "format": "FLOAT32"},
     {"id": 23102, "name": "Current High", "format": "FLOAT32"},
     {"id": 23110, "name": "Current Low", "format": "FLOAT32"},
+    {"id": 23120, "name": "Current Error Threshold", "format": "FLOAT32"},
     #PID
     {"id": 27000, "name": "Kp", "format": "FLOAT32"}, #%/A
     {"id": 27001, "name": "Ti", "format": "FLOAT32"}, #%s
