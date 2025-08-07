@@ -102,6 +102,7 @@ LDD_1137_PARAMETERS = [
     #LDD status
     {"id": 21104, "name": "LDD Status", "format": "INT32"},
     {"id": 21105, "name": "LDD Error Nr", "format": "INT32"},
+    {"id": 21111, "name": "Reset", "format": "INT32"},
     #LDD
     {"id": 1010, "name": "Driver Input Voltage", "format": "FLOAT32"},
     {"id": 20000, "name": "Laser Diode Current CW", "format": "FLOAT32"},
