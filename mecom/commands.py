@@ -119,6 +119,15 @@ LDD_1137_PARAMETERS = [
     {"id": 23102, "name": "Current High", "format": "FLOAT32"},
     {"id": 23110, "name": "Current Low", "format": "FLOAT32"},
     {"id": 23120, "name": "Current Error Threshold", "format": "FLOAT32"},
+    #Signal Generator
+    {"id":22100, "name": "Wave", "format": "INT32"},
+    {"id":22101, "name": "Amplitude", "format": "FLOAT32"}, #A
+    {"id":22102, "name": "Offset", "format": "FLOAT32"}, #A
+    {"id":22103, "name": "Frequency", "format": "FLOAT32"}, #Hz
+    {"id":22104, "name": "Trigger", "format": "INT32"}, #deg
+    {"id":22105, "name": "Duty Cycle", "format": "FLOAT32"}, #%
+    {"id":22000, "name": "Current Source Selector", "format": "INT32"}, #0=off, 1=signal generator, 2=LUT, 3=analog input
+    {"id":27010, "name": "Slew Rate Limiter", "format": "FLOAT32"}, #A/us
     #PID
     {"id": 27000, "name": "Kp", "format": "FLOAT32"}, #%/A
     {"id": 27001, "name": "Ti", "format": "FLOAT32"}, #%s
